@@ -17,8 +17,9 @@
       stop(paste0("File", ifile, " doesn't exist, please check the name or the path."))
   
   # Read files .rep and .yld
-  outputs = readList(file.path(inputPath, outputs))
   ypr     = .readYPR(file.path(inputPath, ypr))
+  outputs = readList(file.path(inputPath, outputs))
+  outputs$YPR = ypr 
   
   # Extract asociated .dat file
   dataName    <- scan(file = file.path(inputPath, paste0(model, ".ctl")), nlines = 2, 
@@ -37,9 +38,11 @@
                       indexModel = outputs$Index_names)
   
   # Group in a list
-  output <- list(info = list(model = modelName),
-                 output = list(info = info.output, output = outputs, YPR = ypr),
-                 data = list(info = info.data, data = data))
+  output <- list(data = data,
+                 output = outputs)
+                #output = list(info = info.output, output = outputs, YPR = ypr),
+                #data = list(info = info.data, data = data 
+                
   
   # Define jjm.output class
   class(output) <- c("jjm.output")

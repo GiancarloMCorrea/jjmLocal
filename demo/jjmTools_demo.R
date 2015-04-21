@@ -4,14 +4,14 @@
 # ------------------------------------------------------------------------
 
 library(devtools)
-install_github(repo="imarpe/jjmTools")
+#install_github(repo="imarpe/jjmTools")
 library(jjmTools)
 
 # Set parameters ----------------------------------------------------------
 
 # Path of JJM repository (from current working directory)
 
-reposDir =  "../admb/"
+reposDir =  "D:/JMSR/GitHub/jjmLocal/SPRFMO/admb/"
 
 # Name of a model
 model = "mod0.0"
@@ -25,7 +25,7 @@ compareList = paste0("mod0.", 1:3)
 runJJM(model = model, path = reposDir)
 
 # Run a list of models
-runJJM(model = compareList, path = reposDir)
+#runJJM(model = compareList, path = reposDir)
 
 
 # Reading -----------------------------------------------------------------
