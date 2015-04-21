@@ -17,8 +17,8 @@
       stop(paste0("File", ifile, " doesn't exist, please check the name or the path."))
   
   # Read files .rep and .yld
-  ypr     = .readYPR(file.path(inputPath, ypr))
   outputs = readList(file.path(inputPath, outputs))
+  ypr     = .readYPR(file.path(inputPath, ypr))
   outputs$YPR = ypr 
   
   # Extract asociated .dat file
