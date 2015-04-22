@@ -5,8 +5,8 @@
   inputPath   <- path
   
   # Set files .rep and .yld
-  outputs = file.path(output, paste0(model, "_R.rep")) 
   ypr     = file.path(output, paste0(model, ".yld"))
+  outputs = file.path(output, paste0(model, "_R.rep")) 
   
   # Verify if files exist
   necesaryFiles = c(paste0(model, ".ctl"), outputs)
