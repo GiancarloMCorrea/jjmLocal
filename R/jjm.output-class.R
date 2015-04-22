@@ -41,7 +41,7 @@
   output <- list(data = data,
                  output = outputs)
                 #output = list(info = info.output, output = outputs, YPR = ypr),
-                #data = list(info = info.data, data = data 
+                #data = list(info = info.data, data = data ))
                 
   
   # Define jjm.output class
